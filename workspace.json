@@ -62,7 +62,7 @@
           }
         },
         "build-tailwind-css": {
-          "builder": "@nrwl/workspace:run-commands",
+          "executor": "@nrwl/workspace:run-commands",
           "outputs": [],
           "options": {
             "command": "npx tailwindcss-cli@latest build ./pages/styles.css -o ./pages/tailwind.css",

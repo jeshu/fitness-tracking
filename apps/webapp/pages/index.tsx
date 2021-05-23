@@ -1,4 +1,5 @@
 import React from 'react';
+import { ProgressCounter } from '@fitness-tracking/ui';
 
 export function Index() {
   /*
@@ -12,7 +13,13 @@ export function Index() {
         .page {
         }
       `}</style>
+      <div className="flex">
 
+        <ProgressCounter />
+        <ProgressCounter />
+        <ProgressCounter />
+        <ProgressCounter />
+      </div>
       <h2>Resources &amp; Tools</h2>
       <p>Thank you for using and showing some ♥ for Nx.</p>
       <div className="flex github-star-container">
