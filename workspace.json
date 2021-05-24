@@ -26,6 +26,7 @@
         "build": {
           "executor": "@nrwl/next:build",
           "outputs": ["{options.outputPath}"],
+          "generatePackageJson": true,
           "options": {
             "root": "apps/webapp",
             "outputPath": "dist/apps/webapp"
@@ -132,6 +133,7 @@
         "build": {
           "executor": "@nrwl/node:build",
           "outputs": ["{options.outputPath}"],
+          "generatePackageJson": true,
           "options": {
             "outputPath": "dist/apps/auth-service",
             "main": "apps/auth-service/src/main.ts",

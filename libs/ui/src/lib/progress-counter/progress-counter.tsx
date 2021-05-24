@@ -12,6 +12,7 @@ export function ProgressCounter(props: ProgressCounterProps) {
   const normalizedRadius = radius - stroke * 2;
   const circumference = normalizedRadius * 2 * Math.PI;
   const strokeDashoffset:number = circumference - 30 / 100 * circumference;
+  const strokeDashoffset2:number = circumference - 100 / 100 * circumference;
   return (
     <div className='inline-flex flex-col p-2 justify-center'>
       
@@ -30,17 +31,17 @@ export function ProgressCounter(props: ProgressCounterProps) {
         cx={ radius }
         cy={ radius }
         />
-        <circle
-          stroke="red"
-          fill="transparent"
-          strokeWidth={ stroke }
-          strokeDasharray={ circumference + ' ' + circumference }
-          style={ { strokeDashoffset } }
-          stroke-width={ stroke }
-          r={ normalizedRadius }
-          cx={ radius }
-          cy={ radius }
-          />
+      <circle
+        stroke="red"
+        fill="transparent"
+        strokeWidth={ stroke }
+        strokeDasharray={ circumference + ' ' + circumference }
+        style={ {strokeDashoffset:strokeDashoffset2}  }
+        stroke-width={ stroke }
+        r={ normalizedRadius }
+        cx={ radius }
+        cy={ radius }
+        />
     </svg>
   
       <div className='flex justify-center text-lg font-medium pt-2'>label</div>
