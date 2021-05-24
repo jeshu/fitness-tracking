@@ -31,6 +31,9 @@
     },
     "ui": {
       "tags": []
+    },
+    "auth-service": {
+      "tags": []
     }
   }
 }
