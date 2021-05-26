@@ -10,7 +10,7 @@ export function ProgressCounter(props: ProgressCounterProps) {
   const stroke:number = 8;
   
   const normalizedRadius = radius - stroke * 2;
-  const circumference = normalizedRadius * 2 * Math.PI;
+  const circumference = normalizedRadius * Math.PI * 2;
   const strokeDashoffset:number = circumference - 30 / 100 * circumference;
   const strokeDashoffset2:number = circumference - 100 / 100 * circumference;
   return (
@@ -25,7 +25,7 @@ export function ProgressCounter(props: ProgressCounterProps) {
         fill="transparent"
         strokeWidth={ stroke }
         strokeDasharray={ circumference + ' ' + circumference }
-        style={ { strokeDashoffset } }
+        style={ {strokeDashoffset:strokeDashoffset2}  }
         stroke-width={ stroke }
         r={ normalizedRadius }
         cx={ radius }
@@ -36,7 +36,7 @@ export function ProgressCounter(props: ProgressCounterProps) {
         fill="transparent"
         strokeWidth={ stroke }
         strokeDasharray={ circumference + ' ' + circumference }
-        style={ {strokeDashoffset:strokeDashoffset2}  }
+        style={ { strokeDashoffset } }
         stroke-width={ stroke }
         r={ normalizedRadius }
         cx={ radius }
